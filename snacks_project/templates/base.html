@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello</h1>
+    {% block nav %}
+    <ul id="nav">
+        <li>{% block nav-home %}<a href="">Home</a>{% endblock %}</li>
+        <li>{% block nav-about %}<a href="{% url 'about' %}">About</a>{% endblock %}</li>
+    </ul>
+    {% endblock %}
+    <h1>Welcome to Snacks Website</h1>
 </body>
 </html>
